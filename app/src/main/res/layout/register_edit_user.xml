@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5DCEC">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_register_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ic_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/black"
+                android:paddingTop="6dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/title_list_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastro/Edição"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/ic_arrow"
+                android:textSize="25sp"
+                android:fontFamily="@font/reem_kuffi_regular" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="100dp"
+            android:elevation="8dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintTop_toBottomOf="@id/title_register_relative"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible">
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/user"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view">
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Nome"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/name_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Telefone"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/date_birth_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/phone_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Data de Nascimento"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/cep_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/date_birth_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="CEP"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/uf_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/cep_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Estado"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/city_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/uf_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Cidade"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/district_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/city_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Bairro"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/street_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/district_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:hint="Rua"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/number_edit"
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/street_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_view_bg"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:hint="Número"
+                android:textColorHint="#939393"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/number_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#1790E8"
+                android:fontFamily="@font/reem_kuffi_regular"
+                android:text="Salvar"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

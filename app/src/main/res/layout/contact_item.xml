@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#C5DCEC">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="25dp"
+        android:elevation="8dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_person_24"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Ricardo Gonçalves de Souza"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/reem_kuffi_regular"
+        android:layout_toEndOf="@id/card_view"
+        android:layout_alignTop="@id/card_view"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/phone_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+551197321-3940"
+        android:fontFamily="sans-serif"
+        android:textSize="10sp"
+        android:layout_below="@id/name_user"
+        android:layout_toEndOf="@id/card_view"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#9F9F9F"
+        />
+
+
+</RelativeLayout>
