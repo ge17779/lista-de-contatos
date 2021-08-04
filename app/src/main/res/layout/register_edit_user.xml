@@ -43,35 +43,54 @@
 
         </RelativeLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_view"
+        <RelativeLayout
+            android:id="@+id/photo_relative"
+            android:layout_marginTop="30dp"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            app:cardCornerRadius="100dp"
-            android:elevation="8dp"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="0.0px"
-            android:clipToPadding="false"
-            android:clipChildren="false"
-            app:cardElevation="10dp"
-            app:cardPreventCornerOverlap="false"
             app:layout_constraintTop_toBottomOf="@id/title_register_relative"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="visible">
+            app:layout_constraintEnd_toEndOf="parent">
 
-<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/user"/>
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:elevation="5dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="false">
 
-        </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/photo_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_baseline_person_24"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/photo_relative"
+            app:layout_constraintEnd_toEndOf="@id/photo_relative"
+            android:src="@drawable/ic_baseline_add_24"
+            android:backgroundTint="#FF03DAC5"
+            app:rippleColor="#04A4D5"
+            android:tint="@color/black"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -82,7 +101,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view">
+            app:layout_constraintTop_toBottomOf="@id/photo_relative">
 
             <EditText
                 android:id="@+id/name_edit"

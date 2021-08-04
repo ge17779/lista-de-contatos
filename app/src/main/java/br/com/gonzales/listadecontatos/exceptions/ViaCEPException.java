@@ -4,7 +4,7 @@
  * 
  * Obtem um CEP no ViaCEP
  */
-package br.com.gonzales.listadecontatos;
+package br.com.gonzales.listadecontatos.exceptions;
 
 /**
  * Classe para registrar uma exceção de CEP

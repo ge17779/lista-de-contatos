@@ -1,4 +1,4 @@
-package br.com.gonzales.listadecontatos;
+package br.com.gonzales.listadecontatos.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,30 +10,31 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.sql.Date;
+
+import br.com.gonzales.listadecontatos.exceptions.ViaCEPException;
 
 public class User {
 
     private String nameTxt;
-    private long phoneTxt;
-    private Date dateOfBirthTxt;
+    private String phoneTxt;
+    private String dateOfBirthTxt;
     private String cepTxt;
     private String estadoTxt;
     private String cidadeTxt;
     private String bairroTxt;
     private String ruaTxt;
-    private int numeroTxt;
+    private String numeroTxt;
 
     public User(){
         this.nameTxt = null;
-        this.phoneTxt = 0;
+        this.phoneTxt = null;
         this.dateOfBirthTxt = null;
         this.cepTxt = null;
         this.estadoTxt = null;
         this.cidadeTxt = null;
         this.bairroTxt = null;
         this.ruaTxt = null;
-        this.numeroTxt = 0;
+        this.numeroTxt = null;
     }
 
     /**
@@ -93,12 +94,90 @@ public class User {
         return result.toString();
     }
 
+    public String getNameTxt() {
+        return nameTxt;
+    }
 
-    //Tela de Cadastro
-//    private void popularCampos(){
-//        estado.setText(estadoTxt);
-//        cidade.setText(cidadeTxt);
-//        bairro.setText(bairroTxt);
-//        rua.setText(ruaTxt);
-//    }
+    public void setNameTxt(String nameTxt) {
+        this.nameTxt = nameTxt;
+    }
+
+    public String getPhoneTxt() {
+        return phoneTxt;
+    }
+
+    public void setPhoneTxt(String phoneTxt) {
+        this.phoneTxt = phoneTxt;
+    }
+
+    public String getDateOfBirthTxt() {
+        return dateOfBirthTxt;
+    }
+
+    public void setDateOfBirthTxt(String dateOfBirthTxt) {
+        this.dateOfBirthTxt = dateOfBirthTxt;
+    }
+
+    public String getCepTxt() {
+        return cepTxt;
+    }
+
+    public void setCepTxt(String cepTxt) {
+        this.cepTxt = cepTxt;
+    }
+
+    public String getEstadoTxt() {
+        return estadoTxt;
+    }
+
+    public void setEstadoTxt(String estadoTxt) {
+        this.estadoTxt = estadoTxt;
+    }
+
+    public String getCidadeTxt() {
+        return cidadeTxt;
+    }
+
+    public void setCidadeTxt(String cidadeTxt) {
+        this.cidadeTxt = cidadeTxt;
+    }
+
+    public String getBairroTxt() {
+        return bairroTxt;
+    }
+
+    public void setBairroTxt(String bairroTxt) {
+        this.bairroTxt = bairroTxt;
+    }
+
+    public String getRuaTxt() {
+        return ruaTxt;
+    }
+
+    public void setRuaTxt(String ruaTxt) {
+        this.ruaTxt = ruaTxt;
+    }
+
+    public String getNumeroTxt() {
+        return numeroTxt;
+    }
+
+    public void setNumeroTxt(String numeroTxt) {
+        this.numeroTxt = numeroTxt;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "nameTxt='" + nameTxt + '\'' +
+                ", phoneTxt=" + phoneTxt +
+                ", dateOfBirthTxt=" + dateOfBirthTxt +
+                ", cepTxt='" + cepTxt + '\'' +
+                ", estadoTxt='" + estadoTxt + '\'' +
+                ", cidadeTxt='" + cidadeTxt + '\'' +
+                ", bairroTxt='" + bairroTxt + '\'' +
+                ", ruaTxt='" + ruaTxt + '\'' +
+                ", numeroTxt=" + numeroTxt +
+                '}';
+    }
 }
